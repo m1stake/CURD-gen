@@ -1,0 +1,9 @@
+author: sff
+beanName: GbItem
+reqMapping: biz/gbItem
+db:
+  host: 192.168.2.55
+  db_name: sanitary_inspection
+  user:
+  password:
+  table: tb_task_flow_inspection_gb_item

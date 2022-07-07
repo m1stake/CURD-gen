@@ -1,0 +1,47 @@
+[
+  {
+    "key": "domain.entity",
+    "path": "domain.entity.java.tpl",
+    "handler": "domain.entity.EntityHandler"
+  },
+  {
+    "key": "domain.dto",
+    "path": "domain.dto.java.tpl",
+    "handler": "domain.dto.DtoHandler"
+  },
+  {
+    "key": "domain.query",
+    "path": "domain.query.java.tpl",
+    "handler": "domain.query.QueryHandler"
+  },
+  {
+    "key": "domain.vo",
+    "path": "domain.vo.java.tpl",
+    "handler": "domain.vo.VoHandler"
+  },
+  {
+    "key": "domain.listVo",
+    "path": "domain.listVo.java.tpl",
+    "handler": "domain.listVo.ListVoHandler"
+  },
+  {
+    "key": "mapper",
+    "path": "mapper.java.tpl",
+    "handler": "mapper.MapperHandler"
+  },
+  {
+    "key": "service",
+    "path": "service.java.tpl",
+    "handler": "service.ServiceHandler"
+  },
+  {
+    "key": "serviceImpl",
+    "path": "serviceImpl.java.tpl",
+    "handler": "serviceImpl.ServiceImplHandler"
+  },
+  {
+    "key": "controller",
+    "path": "controller.java.tpl",
+    "handler": "controller.ControllerHandler"
+  }
+]

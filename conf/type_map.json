@@ -1,0 +1,19 @@
+{
+  "varchar": "String",
+  "int": "Integer",
+  "tinyint": "Integer",
+  "bigint": "Long",
+  "date": "LocalDate",
+  "datetime": "LocalDateTime",
+  "timestamp": "LocalDateTime",
+  "_typeInfo": {
+    "LocalDate": {
+      "fullName": "java.time.LocalDate",
+      "dateFormat": "yyyy-MM-dd"
+    },
+    "LocalDateTime": {
+      "fullName": "java.time.LocalDateTime",
+      "dateFormat": "yyyy-MM-dd HH:mm:ss"
+    }
+  }
+}

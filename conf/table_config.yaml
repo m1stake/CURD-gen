@@ -1,0 +1,11 @@
+column:
+  ignores:
+    - id
+    - create_time
+    - create_id
+    - create_by
+    - update_time
+    - update_id
+    - update_by
+    - del_flag
+    - revision

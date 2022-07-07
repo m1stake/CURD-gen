@@ -1,0 +1,39 @@
+basePath: "E:/workspace/project/sanitary-inspection-be/sanitary-inspection-core-biz"
+basePackage: com.microsun.inspection.core.biz
+domain:
+  entity:
+    suffix: DO
+    package: domain.entity
+  dto:
+    suffix: DTO
+    package: domain.dto
+  query:
+    suffix: Query
+    package: domain.dto
+  vo:
+    suffix: VO
+    package: domain.vo
+  listVo:
+    suffix: ListVO
+    package: domain.vo
+mapper:
+  suffix: ListVO
+  package: domain.vo
+service:
+  interface:
+    suffix: ListVO
+    package: domain.vo
+  impl:
+    suffix: ListVO
+    package: domain.vo
+controller:
+  suffix: ListVO
+  package:
+  basePath: "E:/workspace/project/sanitary-inspection-be/sanitary-inspection-admin"
+  basePackage: com.microsun.web.controller.biz
+
+
+
+
+
+
