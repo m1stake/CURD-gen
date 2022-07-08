@@ -1,5 +1,5 @@
 # CRUD-gen
-CRUD java code generator, by db table or ddl sql
+CRUD Java代码生成工具, 通过数据库表或者DDL SQL（DDL未实现）
 
 - 读取数据库表信息
 - 根据表信息得到基本信息
