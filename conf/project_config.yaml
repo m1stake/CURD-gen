@@ -17,17 +17,17 @@ domain:
     suffix: ListVO
     package: domain.vo
 mapper:
-  suffix: ListVO
-  package: domain.vo
+  suffix: mapper
+  package: mapper
 service:
   interface:
-    suffix: ListVO
-    package: domain.vo
+    suffix: Service
+    package: service
   impl:
-    suffix: ListVO
-    package: domain.vo
+    suffix: ServiceImpl
+    package: service.impl
 controller:
-  suffix: ListVO
+  suffix: Controller
   package:
   basePath: "E:/workspace/project/sanitary-inspection-be/sanitary-inspection-admin"
   basePackage: com.microsun.web.controller.biz
