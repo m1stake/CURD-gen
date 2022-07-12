@@ -9,3 +9,4 @@ column:
     - update_by
     - del_flag
     - revision
+    - sort

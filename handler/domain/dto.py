@@ -11,7 +11,7 @@ class DtoHandler(BaseHandler):
             'author': task['author'],
             'datetime': task['datetime'],
             'package': class_info['pkg'],
-            'path': class_info['path'] + "/" + class_info['className'] + ".java",
+            'path': class_info['path'],
             'imports': [*entity_info['imports']],
             'beanDesc': class_info['beanDesc'],
             'beanClassName': class_info['beanClassName'],

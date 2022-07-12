@@ -17,7 +17,7 @@ class ControllerHandler(BaseHandler):
             'author': task['author'],
             'datetime': task['datetime'],
             'package': class_info['pkg'],
-            'path': class_info['path'] + "/" + class_info['className'] + ".java",
+            'path': class_info['path'],
             'imports': imports,
             'beanDesc': class_info['beanDesc'],
             'beanClassName': class_info['beanClassName'],

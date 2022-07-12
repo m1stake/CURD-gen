@@ -1,9 +1,12 @@
 author: sff
-beanName: GbItem
-reqMapping: biz/gbItem
+beanName: RetentionDisposalCooperator
+reqMapping: biz/
 db:
   host: 192.168.2.55
   db_name: sanitary_inspection
   user:
   password:
-  table: tb_task_flow_inspection_gb_item
+  table: tb_task_flow_inspection_sample_retention_disposal_cooperator
+file:
+  mkdir: true
+  overwrite: NO

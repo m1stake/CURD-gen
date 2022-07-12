@@ -17,7 +17,7 @@ domain:
     suffix: ListVO
     package: domain.vo
 mapper:
-  suffix: mapper
+  suffix: Mapper
   package: mapper
 service:
   interface:
@@ -28,9 +28,9 @@ service:
     package: service.impl
 controller:
   suffix: Controller
-  package:
-  basePath: "E:/workspace/project/sanitary-inspection-be/sanitary-inspection-admin"
-  basePackage: com.microsun.web.controller.biz
+  package: controller
+  basePath:
+  basePackage:
 
 
 
