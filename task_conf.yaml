@@ -1,12 +1,15 @@
+basePath: "E:/workspace/project/sanitary-inspection-be/sanitary-inspection-core-biz"
+basePackage: com.microsun.inspection.core.rseq
 author: sff
-beanName: RetentionDisposalCooperator
-reqMapping: biz/
+beanName: GbItemAttachment
+reqMapping: biz/gbItemAttachment
 db:
-  host: 192.168.2.55
-  db_name: sanitary_inspection
-  user:
-  password:
-  table: tb_task_flow_inspection_sample_retention_disposal_cooperator
+  host: 8.143.199.171
+  port: 3308
+  db_name: sanitary_inspection_new
+  user: root
+  password: root
+  table: tb_task_flow_inspection_item_attachment
 file:
   mkdir: true
   overwrite: NO

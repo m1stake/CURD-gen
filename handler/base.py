@@ -28,9 +28,10 @@ class BaseHandler:
     @staticmethod
     def get_class_info(env, conf_key):
         project_conf = config.get_project_config()
+        task_conf = config.get_task_config()
         entity_conf = _get_from_project_conf(project_conf, conf_key)
-        pkg = BaseHandler.get_package(project_conf['basePackage'], entity_conf)
-        path = BaseHandler.get_path(project_conf['basePath'], pkg, entity_conf)
+        pkg = BaseHandler.get_package(task_conf['basePackage'], entity_conf)
+        path = BaseHandler.get_path(task_conf['basePath'], pkg, entity_conf)
 
         table_info = env['tableInfo']
         bean_class_name = _bean_name(env, table_info['TABLE_NAME'])

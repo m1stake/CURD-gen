@@ -10,7 +10,7 @@ class TableInfoHandler(BaseHandler):
         env['tableInfo'] = _get_table_info(**args)
 
 
-def _get_table_info(db_name, table, host='localhost', user='root', password='123456'):
+def _get_table_info(db_name, table, host='localhost', port=3306, user='root', password='123456'):
 
     table_info_sql = 'select table_name, table_comment ' \
                      'from information_schema.tables ' \
@@ -19,7 +19,7 @@ def _get_table_info(db_name, table, host='localhost', user='root', password='123
                       'from information_schema.columns ' \
                       'where table_schema="%s" and table_name ="%s"' % (db_name, table)
 
-    conn = pymysql.connect(host=host, user=user, password=password, database=db_name,
+    conn = pymysql.connect(host=host, port=port, user=user, password=password, database=db_name,
                            cursorclass=pymysql.cursors.DictCursor)
     with conn:
         with conn.cursor() as cursor:

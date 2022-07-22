@@ -1,5 +1,3 @@
-basePath: "E:/workspace/project/sanitary-inspection-be/sanitary-inspection-core-biz"
-basePackage: com.microsun.inspection.core.biz
 domain:
   entity:
     suffix: DO

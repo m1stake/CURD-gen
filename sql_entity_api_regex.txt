@@ -1,0 +1,28 @@
+============ sql -> entity ==============
+
+--------- 生成字段
+\s*(\w+) +(\S+) .*comment '(.+)',?
+--
+/**\n * $3\n */\nprivate $2 $1;\n\n
+
+--------- 修改String类型
+private (varchar\(\d*\)) (\w+);
+--
+private String $2;
+
+--------- 修改int类型
+private \w*int (\w+);
+--
+private Integer $1;
+
+--------- 修改datetime类型
+private datetime (\w+);
+--
+private LocalDateTime $1;
+
+
+
+=========== java-doc -> swagger-doc ===============
+/\*\*\n( |\t)*\*\s*(\S+)([^(\n|\r|\r\n)]*\S+)?\s*\n( |\t)*\*/
+--
+/\*\*\n \* $2$3\n \*/\n@ApiModelProperty\("$2$3"\)
