@@ -1,0 +1,15 @@
+basePath: "E:/workspace/project/test"
+basePackage: com.songfeifan.test
+author: joker
+beanName: User
+reqMapping: user
+db:
+  host: localhost
+  port: 3306
+  db_name:
+  user:
+  password:
+  table:
+file:
+  mkdir: true
+  overwrite: NO
