@@ -6,6 +6,7 @@
   "date": "LocalDate",
   "datetime": "LocalDateTime",
   "timestamp": "LocalDateTime",
+  ".*text": "String",
   "_typeInfo": {
     "LocalDate": {
       "fullName": "java.time.LocalDate",

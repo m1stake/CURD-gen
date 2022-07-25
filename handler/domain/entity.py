@@ -1,5 +1,6 @@
 from handler.base import BaseHandler
 import config
+import re
 
 
 class EntityHandler(BaseHandler):
@@ -53,9 +54,15 @@ def _build_fields(table_info):
 def _translate_type(data_type: str):
     data_type = data_type.lower()
     if data_type in _type_map:
+        # 直接类型匹配
         return _type_map[data_type]
     else:
-        return None
+        # 正则类型匹配
+        for type_pattern in _type_map.keys():
+            if re.fullmatch(type_pattern, data_type):
+                return _type_map[type_pattern]
+        else:
+            return None
 
 
 def _snake_to_camel_case(snake_words: str, first_upper: bool):
@@ -88,11 +95,9 @@ def _date_format(field_type):
 
 
 def _remove_ignore_columns(table_info):
-    if 'column' in _table_conf and 'ignores' in _table_conf['column'] and type(_table_conf['column']['ignores']) == list:
+    if 'column' in _table_conf and 'ignores' in _table_conf['column'] and type(
+            _table_conf['column']['ignores']) == list:
         ignore_columns = _table_conf['column']['ignores']
         for column in table_info['columns'][:]:
             if column['COLUMN_NAME'] in ignore_columns:
                 table_info['columns'].remove(column)
-
-
-
