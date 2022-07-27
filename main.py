@@ -59,13 +59,15 @@ def render(render_func, **kwargs):
 
 
 if __name__ == '__main__':
-    # render(write_to_console)
-
-    # _task_conf = config.get_task_config()
-    # _mkdir = _task_conf['file']['mkdir']
-    # _overwrite = _task_conf['file']['overwrite']
-    # render(write_to_real_path, mkdir=_mkdir, overwrite='SKIP')
-
-    render(write_to_out)
+    _task_conf = config.get_task_config()
+    _render_out = _task_conf['render']['out']
+    if _render_out == 'console':
+        render(write_to_console)
+    elif _render_out == 'real_path':
+        _mkdir = _task_conf['file']['mkdir']
+        _overwrite = _task_conf['file']['overwrite']
+        render(write_to_real_path, mkdir=_mkdir, overwrite='SKIP')
+    elif _render_out == 'out':
+        render(write_to_out)
 
 # TODO 文件后缀类型

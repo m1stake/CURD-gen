@@ -13,5 +13,11 @@ import lombok.Data;
 @Data
 @ApiModel("{{ beanDesc }}dto")
 public class {{ beanClassName }}DTO {
+
+    /**
+     * id
+     */
+    @ApiModelProperty("id")
+    private String id;
 {% include 'part.apiField.tpl' %}
 }
