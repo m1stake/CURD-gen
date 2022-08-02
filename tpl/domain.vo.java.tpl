@@ -1,6 +1,6 @@
 package {{ package }};
 
-import com.microsun.common.core.domain.AbstractVO;
+import com.domain.AbstractVO;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

@@ -1,7 +1,7 @@
 package {{ package }};
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.microsun.common.core.domain.AbstractEntity;
+import com.AbstractEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 {% include 'part.importClass.tpl' %}

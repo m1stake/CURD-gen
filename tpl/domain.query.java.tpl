@@ -1,6 +1,6 @@
 package {{ package }};
 
-import com.microsun.common.core.domain.PageQuery;
+import com.domain.PageQuery;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

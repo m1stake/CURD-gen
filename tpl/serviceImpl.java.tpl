@@ -3,7 +3,7 @@ package {{package}};
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.microsun.common.utils.BeanCopyUtils;
+import com.utils.BeanCopyUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 {% include 'part.importClass.tpl' %}
@@ -41,15 +41,15 @@ public class {{beanClassName}}ServiceImpl implements {{beanClassName}}Service {
     }
 
     @Override
-    public void delete(String id) {
-        {{beanName}}Mapper.deleteById(id);
-    }
-
-    @Override
     public void update({{beanClassName}}DTO {{beanName}}Dto) {
         {{beanClassName}}DO {{beanName}} = BeanCopyUtils.copyNonNull({{beanName}}Dto, {{beanClassName}}DO.class);
         {{beanName}}.genUpdateInfo();
         {{beanName}}Mapper.updateById({{beanName}});
+    }
+
+    @Override
+    public void delete(String id) {
+        {{beanName}}Mapper.deleteById(id);
     }
 
     private LambdaQueryWrapper<{{beanClassName}}DO> buildQuery({{beanClassName}}Query query) {
