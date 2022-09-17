@@ -8,8 +8,8 @@ import lombok.EqualsAndHashCode;
 {% include 'part.importClass.tpl' %}
 /**
  * {{ beanDesc }}
- * @author: {{ author }}
- * @date: {{ datetime }}
+ * @author {{ author }}
+ * @date {{ datetime }}
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

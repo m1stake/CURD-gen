@@ -13,6 +13,7 @@ class ServiceImplHandler(BaseHandler):
             'domain.vo',
             'domain.listVo',
             'mapper',
+            'service'
         })
         variables = {
             'author': task['author'],

@@ -4,8 +4,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 {% include 'part.importClass.tpl' %}
 /**
  * {{ beanDesc }}
- * @author: {{ author }}
- * @date: {{ datetime }}
+ * @author {{ author }}
+ * @date {{ datetime }}
  */
 public interface {{beanClassName}}Service {
 
