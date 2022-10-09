@@ -12,7 +12,10 @@ db:
   table:
 file:
   mkdir: true
-  overwrite:
+  # YES/NO/SKIP
+  overwrite: NO
 render:
-  # out/console/real_path
+  # out, file out path; real_path, to real path; console, to console;
   out: out
+tpl:
+  basePath: ./tpl_local

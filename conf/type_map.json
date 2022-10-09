@@ -6,6 +6,7 @@
   "date": "LocalDate",
   "datetime": "LocalDateTime",
   "timestamp": "LocalDateTime",
+  "decimal": "BigDecimal",
   ".*text": "String",
   "_typeInfo": {
     "LocalDate": {
@@ -15,6 +16,9 @@
     "LocalDateTime": {
       "fullName": "java.time.LocalDateTime",
       "dateFormat": "yyyy-MM-dd HH:mm:ss"
+    },
+    "BigDecimal": {
+      "fullName": "java.math.BigDecimal"
     }
   }
 }
