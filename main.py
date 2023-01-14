@@ -66,7 +66,7 @@ if __name__ == '__main__':
     elif _render_out == 'real_path':
         _mkdir = _task_conf['file']['mkdir']
         _overwrite = _task_conf['file']['overwrite']
-        render(write_to_real_path, mkdir=_mkdir, overwrite='SKIP')
+        render(write_to_real_path, mkdir=_mkdir, overwrite=_overwrite)
     elif _render_out == 'out':
         render(write_to_out)
 

@@ -13,7 +13,7 @@ db:
 file:
   mkdir: true
   # YES/NO/SKIP
-  overwrite: NO
+  overwrite: "NO"
 render:
   # out, file out path; real_path, to real path; console, to console;
   out: out
