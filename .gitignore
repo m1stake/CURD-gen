@@ -4,4 +4,5 @@ __pycache__
 *.iml
 sql_parse_test.py
 task_conf.yaml
+task_conf_*.yaml
 tpl_local
