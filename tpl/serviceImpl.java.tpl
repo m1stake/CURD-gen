@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.utils.BeanCopyUtils;
 import lombok.RequiredArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 {% include 'part.importClass.tpl' %}
 /**
@@ -27,9 +28,10 @@ public class {{beanClassName}}ServiceImpl implements {{beanClassName}}Service {
         return PageUtil.mapPage(p, {{beanClassName}}ListVO.class);
     }
 
+    @Transactional(rollbackFor = Throwable.class)
     @Override
     public void add({{beanClassName}}DTO {{beanName}}Dto) {
-        {{beanClassName}}DO {{beanName}} = BeanCopyUtils.copyNonNull({{beanName}}Dto, {{beanClassName}}DO.class);
+        {{beanClassName}}DO {{beanName}} = copyNonNull({{beanName}}Dto, {{beanClassName}}DO.class);
         {{beanName}}.genCreateInfo();
         {{beanName}}Mapper.insert({{beanName}});
     }
@@ -40,21 +42,22 @@ public class {{beanClassName}}ServiceImpl implements {{beanClassName}}Service {
         return BeanCopyUtils.copyNonNull({{beanName}}, {{beanClassName}}VO.class);
     }
 
+    @Transactional(rollbackFor = Throwable.class)
     @Override
     public void update({{beanClassName}}DTO {{beanName}}Dto) {
-        {{beanClassName}}DO {{beanName}} = BeanCopyUtils.copyNonNull({{beanName}}Dto, {{beanClassName}}DO.class);
+        {{beanClassName}}DO {{beanName}} = copyNonNull({{beanName}}Dto, {{beanClassName}}DO.class);
         {{beanName}}.genUpdateInfo();
         {{beanName}}Mapper.updateById({{beanName}});
     }
 
+    @Transactional(rollbackFor = Throwable.class)
     @Override
     public void delete(String id) {
         {{beanName}}Mapper.deleteById(id);
     }
 
     private LambdaQueryWrapper<{{beanClassName}}DO> buildQuery({{beanClassName}}Query query) {
-        LambdaQueryWrapper<{{beanClassName}}DO> wrapper = Wrappers.<{{beanClassName}}DO>lambdaQuery()
+        return Wrappers.<{{beanClassName}}DO>lambdaQuery()
             .orderByDesc({{beanClassName}}DO::getCreateTime);
-        return wrapper;
     }
 }

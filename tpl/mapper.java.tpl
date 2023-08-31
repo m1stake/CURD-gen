@@ -1,12 +1,13 @@
 package {{ package }};
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.microsun.common.core.mapper.BaseMapperPlus;
 {% include 'part.importClass.tpl' %}
 /**
  * {{beanDesc}}
  * @author {{author}}
  * @date {{datetime}}
  */
-public interface {{beanClassName}}Mapper extends BaseMapper<{{beanClassName}}DO> {
+public interface {{beanClassName}}Mapper
+    extends BaseMapperPlus<{{beanClassName}}Mapper, {{beanClassName}}DO, {{beanClassName}}DO> {
 
 }
