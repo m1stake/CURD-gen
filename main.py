@@ -59,6 +59,7 @@ def render(render_func, **kwargs):
 
 
 if __name__ == '__main__':
+    config.task_conf_path = input("请输入配置文件地址（例：./task_conf_px.yaml）：")
     _task_conf = config.get_task_config()
     _render_out = _task_conf['render']['out']
     if _render_out == 'console':
