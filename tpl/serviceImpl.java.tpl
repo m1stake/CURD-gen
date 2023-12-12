@@ -1,5 +1,6 @@
 package {{package}};
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -22,10 +23,11 @@ public class {{beanClassName}}ServiceImpl implements {{beanClassName}}Service {
 
     @Override
     public Page<{{beanClassName}}ListVO> query({{beanClassName}}Query query) {
-        Page<{{beanClassName}}DO> p = {{beanName}}Mapper.selectPage(
-            PageUtil.getPage(query),
-            buildQuery(query));
-        return PageUtil.mapPage(p, {{beanClassName}}ListVO.class);
+        return {{beanName}}Mapper.selectVoPage(
+            query.build(),
+            buildQuery(query),
+            {{beanClassName}}ListVO.class
+        );
     }
 
     @Transactional(rollbackFor = Throwable.class)
@@ -38,8 +40,7 @@ public class {{beanClassName}}ServiceImpl implements {{beanClassName}}Service {
 
     @Override
     public {{beanClassName}}VO get(String id) {
-        {{beanClassName}}DO {{beanName}} = {{beanName}}Mapper.selectById(id);
-        return BeanCopyUtils.copyNonNull({{beanName}}, {{beanClassName}}VO.class);
+        return {{beanName}}Mapper.selectVoById(id, {{beanClassName}}VO.class);
     }
 
     @Transactional(rollbackFor = Throwable.class)
