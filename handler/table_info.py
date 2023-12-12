@@ -10,7 +10,7 @@ class TableInfoHandler(BaseHandler):
         env['tableInfo'] = _get_table_info(**args)
 
 
-def _get_table_info(db_name, table, host='localhost', port=3306, user='root', password='123456'):
+def _get_table_info(db_name, table, host='localhost', port=3306, user='root', password='123456', **kwargs):
 
     table_info_sql = 'select table_name, table_comment ' \
                      'from information_schema.tables ' \

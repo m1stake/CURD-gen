@@ -4,12 +4,9 @@ author: joker
 beanName: User
 reqMapping: user
 db:
-  host: localhost
-  port: 3306
-  db_name:
-  user:
-  password:
-  table:
+  id: db1
+  db_name: d1
+  table: t_t1
 file:
   mkdir: true
   # YES/NO/SKIP

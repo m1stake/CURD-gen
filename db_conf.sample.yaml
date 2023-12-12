@@ -1,0 +1,11 @@
+dbs:
+  db1:
+    host: localhost
+    port: 3306
+    user:
+    password:
+  db2:
+    host: localhost
+    port: 3306
+    user:
+    password:

@@ -3,6 +3,7 @@ out
 __pycache__
 *.iml
 sql_parse_test.py
+db_conf.yaml
 task_conf.yaml
 task_conf_*.yaml
 tpl_local

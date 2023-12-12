@@ -1,3 +1,4 @@
+from typing import Union
 import json
 import yaml
 
@@ -10,7 +11,7 @@ _task_conf = None
 _tpl_conf = None
 
 # ./task_conf_xxx.yaml
-task_conf_path = None
+task_conf_path: Union[str, None] = None
 
 
 def get_type_map():
@@ -48,8 +49,11 @@ def get_project_config():
 def get_task_config():
     global _task_conf
     if not _task_conf:
-        with open(task_conf_path) as config:
-            _task_conf = yaml.load(config, yaml.Loader)
+        with open('./db_conf.yaml') as db_config:
+            db_conf = yaml.load(db_config, yaml.Loader)
+            with open(task_conf_path) as config:
+                _task_conf = yaml.load(config, yaml.Loader)
+                _task_conf['db'].update(db_conf['dbs'][_task_conf['db']['id']])
     return _task_conf
 
 
